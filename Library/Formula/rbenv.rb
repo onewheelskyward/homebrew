@@ -19,6 +19,10 @@ class Rbenv < Formula
 
     To enable shims and autocompletion add to your profile:
       if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+      
+    Fish shell users, add the following to ~/.config/fish/config.fish:
+      set -x PATH /usr/local/var/rbenv/shims $PATH
+      rbenv rehash
     EOS
   end
 
